@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Canvas확인</h1>
+    <canvas id="myCanvas" width="300" height="200" style="border: 2px solid orange;">
+    </canvas>
+    <script>
+                let paper = document.getElementById("myCanvas");//myCanvasid 들고올것
+                let context = paper.getContext("2d");//무엇을 그릴지 paper에서getcontext를 하여 2d 
+                
+                //선형 그라디언트
+                let grdline = context.createLinearGradient(1,1,170, 130);//선형
+                grdline.addColorStop(0,"blue");
+                grdline.addColorStop(1,"white");
+                //색을 입히고 그려주기
+                context.fillStyle = grdline ; //grd 에 지정한거 넣기
+                context.fillRect(1,1, 150, 80);//사각형그리기\\
+                context.stroke();
+
+                //사각형위에 글씨쓰기
+                context.font="30px Arial"//폰트정해줌
+                context.fillStyle = "#ffffff"//스타일색
+                context.fillText("CANVAS" , 11, 40);//캔버스 가로17에서 부터 시작 세로50해서 얼추주앙 텍스트색칠 ("글자", x ,y)
+
+
+
+        console.log(paper);
+
+    </script>
+</body>
+</html>

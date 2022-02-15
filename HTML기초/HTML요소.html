@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML요소</title>
+    <style>
+        p { background-color : red;}
+        table{ border: 2px solid black;}
+        tr{ border: 2px solid blue;}
+        td{ border: 2px solid olive;}
+    </style>
+</head>
+<body>
+    <h3><a name="up"></a> 스타일태그 확인</h3>
+    <!-- 스타일태그는 헤드에 넣어서 원하는 위치에 디자인을 줄수있다-->
+    <p style="color: blue;">스타일태그가 적용된 태그입니다</p>
+    <p style="color: #8f89e4;">색상값으로 적용된 태그입니다</p>
+    <p style="background-color: burlywood; border: 2px solid black">배경과 테두리입니다</p>
+    <!-- 윈도우 + shift +s 스샷 -->
+    <h3>링크</h3>
+    <a href="텍스트확인.html">텍스트 확인으로 넘어갑니다.</a><br>
+    <a href="https://www.naver.com/">
+        <img src="/HTML기초/img/naver.png" alt="네이버" title="절대경로를 이용해서 이미지 들고오기"> </a>
+    <br>
+    <a href="https://www.daum.net/" target="_blank">
+        <img src="/HTML기초/img/daum.png" alt="다음" title=".(현재경로)를 이용한 상대경로로 이미지들고오기">
+    <!-- ./현재위치 -->
+    </a>
+    
+    <a href="#up">맨위로 올라가기</a><br>
+
+    <h3>리스트 태그 확인</h3>
+    <ul style="list-style-type: circle;">
+        <li>순서가 없는 리스트</li>
+        <li>순서가 없는 리스트</li>
+        <li>순서가 없는 리스트</li>
+    </ul>
+    <ol style="list-style-type: lower-roman;">
+        <li>순서가 있는 리스트</li>
+        <li>순서가 있는 리스트</li>
+        <li>순서가 있는 리스트</li>
+    </ol>
+    <dl>
+        <dt style="font-weight: bold;">정의</dt>
+        <dd>뜻</dd>
+        <br>
+        <dt><b>김주열[ 金朱烈 ]</b> </dt>
+        <dd>본관 김해(金海), 전라북도 남원(南原) 출생. 남원 금지중학(金池中學)을 졸업하고, 1960년 마산상고(馬山商高)에 입학하였다. 그해 3·15부정선거를 규탄하는 시위에 참가하였다가 실종, 한 달 후인 4월 11일 최루탄(催淚彈)이 눈에 박힌 채 유기(遺棄)되어 마산 앞바다에 떠오른 것이 발견되고, 이것이 경찰의 소행으로 밝혀지자 학생과 시민의 분노가 또다시 폭발하여 4·19혁명의 도화선이 되었다.
+            [네이버 지식백과] 김주열 [金朱烈] (두산백과)
+            </dd>
+    </dl>
+    
+    <h3>테이블 작성</h3>
+    <table>
+        <tr>
+            <td rowspan="3">자기자신과 아래 셀 2개를 차지한다</td>
+            <td colspan="3">rowspan을 사용한 첫번째 tr</td>
+        </tr>
+
+        <tr title="row(열)를 작성한다">
+            <td>이름</td>
+            <td>부산</td>
+            <td>하나의 셀이 생깁니다</td>
+        </tr>
+            <tr>
+                <td colspan="3">하나의 셀만 사용하면? 셀합치고싶을때 colspan</td> 
+            </tr>
+            <tr>
+                <td>1칸차지</td>
+                <td colspan="2">2칸차지</td>
+            </tr>
+            <table>
+                <tr>
+                    <td>이름</td>
+                    <td>나이</td>
+                    <td>주소</td>
+                </tr>
+                <tr>
+                    <td>김소라</td>
+                    <td>11</td>
+                    <td>부산</td>
+                </tr>
+                <tr>
+                    <td>홍실동</td>
+                    <td colspan="2">주관식은 </td>
+                    
+                </tr>
+            </table>
+            
+           
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    </body> 
+</html>

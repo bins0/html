@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지맵연습</title>
+</head>
+<body>
+    <h1>이미지맵 연습</h1>
+    <img src="/HTML기초/img/이미지앱.png" alt="이미지맵 연습" usemap="#vending"><!--같은폴더여서html기초나 ./img 폴더로들어가도됨-->
+    <map name="vending">
+        <area shape="rect" coords="52,61,500,140" href="https://www.naver.com" alt="네이버"><!--원하는모양영역위치coords위의 사각형 꼭지점하나찍고 길이맨왼쪽위 좌표,맨오른쪽아래좌표-->
+        <area shape="circle" coords="160,455,40" href="https://www.daum.net" alt=""><!--원중심점 좌표,중심점에서 반지름좌표--> 162,454 117,456
+    </map><!--링크걸어줌 어떤건지 이름적어야됨 위에 usemap사용해서 이름적음#없이 vending적음-->
+    <p> 이미지맵은 하나의 이미지안에 영역을 지정해서 링크를 걸수있는 방법이다<div class="br"></div>
+        이미 디자인된 하나의 디자인물이 있을때 사용한다.
+        모양의 위치를 지정하는 방법은 canvas나 svg의 그림그릴때와 동일하다좌표값적어줌 coords =coordiate
+    </p>
+</body>     
+</html>499,60 498,134

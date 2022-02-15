@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form실습</title>
+   
+    
+</head>
+<body>
+    <h1>로그인 페이지 입니다</h1>
+    <form> <!--데이터값을 다른 웹페이지로 보내기 위해 사용-->
+        
+            <table style="border: 3px solid black;"><!--입력폼을 테이블로정렬해서 보이기 위함-->
+                <tr><!--tr을 사용해서 행(row)을 추가한다.-->
+                    <td>사용자:</td><!--table data의 약자 (개별의 셀값)-->
+                    <td><input type="text" name="name"></td><!--다른웹페이지 보내기위해 name사용-->
+                    <td rowspan="2"><input type="submit" value="전송"></td>
+                    <!--row 행을 두개를 선택하여 자신의 td와 합친다-->
+                </tr>
+                <tr>
+                    <td>비밀번호:</td>
+                    <td><input type="password"></td>
+                </tr>
+                </table>
+    </form>
+    <a href="">비밀번호를 잊어버렸나요?</a> <!--form태그 밖에 넣어도 됨-->
+    <!-- 웹과 클라이언트관계 -->
+    <!-- 인터넷 -웹서핑, 게임 -->
+    <!-- 여러대의 컴퓨터와서버가 연결
+    웹 - 웹사이트: 네이버, 다음 
+웹사이트 특징 : 하이퍼링크를 통해서 각각페이지를 돌아다님. 이것을 웹서핑이라함
+컴퓨터와서버연결됨
+사용자가 쓰는 컴퓨터를 클라이언트 : 웹브라우저(크롬,엣지)를 통해접속 더블클릭시화면뜸원하는 정보입력시 관련되서 연결됨
+웹페이지 제공해주는 컴퓨터를 웹서버: 웹페이지를 만들고 저장해서 제공
+
+저희: 컴퓨터에 웹페이지를 만들고 저장(서버) > 브라우저를 통해 접속(클라이언트)
+구글주소 :도메인 > 사람이 알아볼수있는 주소
+127.0.0.1 > ip주소
+:5500/:포트번호 아이피주소로 접근하거나 들어갈수있음 사람이 만든 도메인주소를 통해 들어갈수있음-
+아이피 주소와 도메인을 도메인서버 저장하고 관리.
+시작검색 > cmd(명령어 프롬프트) ipconfig-> 어떻게 ip주소가 되어있는 지 확인
+ipv4 0 ~ 255.0~255.0~255.0~255 > 4개
+ipv6 16 진수(0~F)::::: > 8개
+ip주소 총 두가지 사용
+ip주소론 사람인식못해서 도메인으로 사용
+   프로토콜 : 컴퓨터끼리 정보를 주고받기 위한 규약(약속) 정보해석확인
+>TCP/IP, HTTP(구글주소 https:// 도메인주소 https 로인식 s는 보안 )
+웹서버가 하는일
+웹페이지를 만들고 그 데이터를 웹페이지를 전달
+HTML- 문서의 뼈대
+CSS - 디자인
+Javascript - 동적 페이지 + Node(서버) + Vue.js(데이터활용)
+.JSP(파일).PHP(파일).JS(파일)통해 활용 폴더분류해서 웹서버에 올림 웹브라우저통해 클릭하며 디자인이나 움직이는페이지 보게됨
+
+
+웹디자이너 디자인 포토샵 일러 틀제공 html css같이 코딩추세 UIUX 디자인
+웹퍼블리셔 html 디자인물을 html css로 만들어서 제공 간단 js
+프론트엔드 html css js 
+index-html파일 소스코드 
+백엔드-->
+<h1>설문조사</h1>
+
+    <form action="">
+    <p>성별을 체크해주세요.<p>
+    <input type="radio" name="gender" value="남" checked>남
+    <input type="radio" name="gender" value="여">여
+
+    <p>음식을 선택해 주세요.</p>
+    <input type="checkbox" name="food" value="한식" checked>한식
+    <input type="checkbox" name="food" value="일식">일식
+    <input type="checkbox" name="food" value="중식">중식
+    <input type="checkbox" name="food" value="양식">양식
+
+    <p>기타의견을 남겨주세요.</p>
+    <textarea name="text" id="" cols="30" rows="5">f</textarea>
+    </form>
+
+    <textarea name="password" id="" cols="30" rows="5"></textarea>
+    <select name="" id="">
+    <option value="gkskw">dfds</option>
+    <option value="gd">gd</option>
+    <option value="gsaf">gsaf</option>
+
+</select>
+  <!--스타일적용우선순위
+  인라인
+  내부
+  외부
+
+  id는 고유 선택자임 하나만 가져야함 
+  class는 반 여러태그 묶어서 사용
+  
+
+인터럽트
+콘솔내장된자바스크립트 인터프린트이다
+연산자제공 if문for문같은 제어문도사용가능
+결과값없음 undefined
+
+script
+document.getElementByld
+-->
+</body>
+</html>

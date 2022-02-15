@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html5추가</title>
+</head>
+<body>
+    <h3>추가된 input요소 확인</h3>
+    <form novalidate>
+        <input type="number"> 숫자입력<br>
+        0 <input type="range" min="0" max="100" > 100 입력범위 지정<br> <!--음량조절할때--> 
+        <input type="color" name="" value="#FFFFFF"> 색상<br>
+        <input type="date" min="2022-02-03">날짜 <!--min입력서 전 날짜 지정못함 max는 그 이후 날짜 지정못함--> <br>
+        <input type="time" value="14:00">시간 <!--value하면 기본값이 설정가능해짐--> <br>
+        <input type="datetime-local">날짜 시간입력 <br>
+        <input type="month" name="" id="">연도와 달<br>
+        <input type="week" name="" id="">연도와 주<br>
+        <input type="email">이메일: -@가 입력되었는지 확인<br> <!--form에navalidate를 써서 @안써도 안나옴-->
+        <input type="url">url <br>
+        <input type="tel"> 전화번호<br><!--사파리에서만 제공-->
+        <input type="search" name="" id="">검색<br>
+        
+
+        <input type="submit" value="제출">
+    </form>
+    <!--자동완성 autocomplite
+    novalidate유효성검사하지 않음 검사안함 form에 novalidate를 사용하면input이메일에 엔터쳐도 @입력하라고 나오지 않음
+    -->
+    <!--formnovalidate 값감추는데사용
+    multiple 여러개 값받아옴
+    pattern 문자열pattern규치 판단값가져오거나 안가져옴
+    place 값미리알려줌
+    required 유효성검사
+    step 일정규칙 값갖게
+    -->
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 캔버스</title>
+</head>
+<body>
+    
+    <h1>canvas 확인하기</h1>
+    <figure>
+        <img id="daum" src="../HTML기초/img/daum.png" alt=""><br>
+        <figcaption>다음이미지</figcaption>
+    </figure>
+    
+    <canvas id="myCanvas" width="300" height="200" style="border: 3px solid black;"></canvas>
+    <!--값저장변수필요let값저장메모리에다저장ctrl delete 에저장-->
+    <h1>svg확인하기</h1>
+    
+    <svg width="300" height="200" style="border: 3px solid black;">
+        <line x1="50" y1 ="0" x2 = "100" y2 ="350" 
+        stroke="orange" stroke-width = "5"></line>
+
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"> </circle>cxcy: ,r=반지름
+    
+        <rect x="150" y="10" width="140" height="80" style="stroke:rgb(0,0,255); 
+        stroke-width: 3; fill:rgb(255,255,0);"></rect>
+
+        <rect x="170" y="50" rx="100" ry="25" width="100" height = "80" 
+        style="stroke: black; stroke-width: 5px; fill:red; opacity: 0.5;"></rect><!--opacity값이 낮아질수록 투명->
+    </svg><!--50만큼 0에서출발 자바스크립트는 너비높이로 svg는 위치로 그려주고있음-->
+    
+    <script>
+        let paper = document.getElementById("myCanvas");
+        let context = paper.getContext("2d");
+        context.fillStyle= "#FF0000";
+        context.fillRect(1,1,150, 75); //왼 위 오 아래 stroke선 색  
+            
+            //원그릴때  원은 그리기전에 패스을 초기화한다 path는 위치지정해줌
+        context.beginPath();
+        context.arc(50,100,10, 0, 2*Math.PI); //원위치이동 중심점기준으로
+        context.strokeStyle="#FFFF00" //색지정할떄
+        context.fill(); // 원 안을  채옴
+        context.stroke();//눈에보이게 그림그려줌
+        /*
+            패스를 지정한 후에 선을 그린다.
+        */
+
+        // 노란선 사선으로 그리기 0.0 150.75로
+        context.moveTo(0,0); //시작점
+        context.lineTo(150,75); //끝점 사선그리기
+        context.stroke();//그려준다
+
+        //텍스트 사선 정중앙에그림 가로150나누기 하면 세로75 75나누기하면거의 35
+        context.font="30px Arial"//폰트정해줌
+        context.fillStyle = "#0000FF"//스타일색
+        context.fillText("CANVAS" , 17, 50);//캔버스 가로17에서 부터 시작 세로50해서 얼추주앙 텍스트색칠 ("글자", x ,y)
+        // fillText는 작성할 내용과 x(시작위치) y(문자의 바닥)에서부터 시작한다. 
+
+        //그라데이션 그라디언트 종류 : 선형-직선으로 색바뀜/원형-원형으로 색바뀜 
+        let grd = context.createRadialGradient(0, 200, 5, 0, 200, 100);//(가로세로75 , 가로,세로가운데점x1x2,끝점x2yx)
+        //redial : 원형그라이언트 (시작 원의 x, y, 중심점, 반지름, 끝나는 원의 x, y중심점, 반지름)
+        grd.addColorStop(0,"red"); 
+        grd.addColorStop(1,"white");
+
+        let grdline = context.createLinearGradient(0,200,150,200);//선형
+        //Linear : 선형그라디언트(시작x, y, 끝 x,y)
+        grdline.addColorStop(0,"blue");
+        grdline.addColorStop(1,"yellow");
+
+        context.fillStyle = grdline ; //grd 에 지정한거 넣기
+        context.fillRect(0,150, 150, 50);//사각형그리기
+
+        context.strokeStyle = grdline;
+        context.rect(0,120, 150, 20);
+        context.stroke();
+
+        //이미지
+        let ficture = document.getElementById("daum");
+        context.drawImage(ficture, 0,200);//어느위치에 그릴지 x10 y250
+
+
+        console.log(paper);
+    </script>
+</body>
+</html>
